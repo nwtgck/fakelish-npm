@@ -1,11 +1,11 @@
 {
   "name": "fakelish",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fake English word generator",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp lib/word_probability.json.gz dist/lib/word_probability.json.gz",
     "prepublish": "npm run build",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
