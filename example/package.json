@@ -1,0 +1,14 @@
+{
+  "name": "fakelish-example",
+  "version": "1.0.0",
+  "description": "Example of fakelish",
+  "main": "example1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "examples": "node example1.js"
+  },
+  "author": "Ryo Ota",
+  "dependencies": {
+    "fakelish": "file:.."
+  }
+}
