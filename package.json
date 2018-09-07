@@ -1,0 +1,33 @@
+{
+  "name": "fakelish",
+  "version": "0.1.0-SNAPSHOT",
+  "description": "Fake English word generator",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "mocha --require ts-node/register test/**/*.ts"
+  },
+  "keywords": [
+    "word",
+    "fake",
+    "generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nwtgck/fakelish-npm"
+  },
+  "author": "Ryo Ota",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^5.0.0",
+    "@types/node": "^10.9.4",
+    "@types/power-assert": "^1.5.0",
+    "espower-typescript": "^9.0.0",
+    "mocha": "^5.0.5",
+    "power-assert": "^1.4.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  }
+}
