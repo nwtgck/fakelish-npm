@@ -1,9 +1,12 @@
 import * as fs   from "fs";
 import * as path from "path";
+import * as zlib from "zlib";
 
 // Word probabilities
 const wordProbability: {[str: string]: [[string, number]]} =
-  JSON.parse(fs.readFileSync(path.join(__dirname, "word_probability.json"), 'utf8'));
+  JSON.parse(
+    zlib.gunzipSync(fs.readFileSync(path.join(__dirname, "word_probability.json.gz"))).toString("utf-8")
+  );
 
 
 /**
