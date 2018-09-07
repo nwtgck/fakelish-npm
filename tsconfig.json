@@ -15,7 +15,7 @@
     "rootDir": "./"
   },
   "include": [
-    "src/**/*",
+    "lib/**/*",
     "test/**/*"
   ],
   "exclude": [
