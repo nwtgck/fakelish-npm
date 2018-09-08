@@ -3,7 +3,7 @@ import * as path    from "path";
 import * as zlib    from "zlib";
 
 // Path of word probabilities file
-const wordProbabilityPath = path.resolve("..", "resources", "word_probability.json.gz");
+const wordProbabilityPath = path.resolve(__dirname, "..", "resources", "word_probability.json.gz");
 
 // Word probabilities
 const wordProbability: {[str: string]: [[string, number]]} =
