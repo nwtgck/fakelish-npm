@@ -12,6 +12,7 @@
     "fakelish": "file:.."
   },
   "devDependencies": {
+    "@babel/preset-es2017": "^7.0.0-beta.53",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
