@@ -6,8 +6,9 @@ node_js:
   - "8"
   - "7"
   - "6"
-  - "5"
 install:
   - npm install
 script:
   - npm test
+  # Test example
+  - npm run build && cd example && npm i && npm run examples
