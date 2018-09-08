@@ -1,3 +1,9 @@
 {
-  "presets": ["es2015", "es2016", "stage-3", "@babel/preset-es2017"]
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ]
 }

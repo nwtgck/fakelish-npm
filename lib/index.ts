@@ -1,10 +1,9 @@
 import * as fs      from "fs";
 import * as path    from "path";
 import * as zlib    from "zlib";
-import * as appRoot from "app-root-path";
 
 // Path of word probabilities file
-const wordProbabilityPath = path.join(appRoot.path, "resources", "word_probability.json.gz");
+const wordProbabilityPath = path.resolve("..", "resources", "word_probability.json.gz");
 
 // Word probabilities
 const wordProbability: {[str: string]: [[string, number]]} =
