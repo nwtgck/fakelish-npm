@@ -41,7 +41,7 @@ function capitalize(str) {
 (<https://runkit.com/nwtgck/5b92ba85f11fe20011ed3873>)
 
 
-The output should like the following.
+The output should be like the following.
 
 ```
 Vess
