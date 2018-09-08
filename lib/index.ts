@@ -1,3 +1,5 @@
+on purpose error
+
 import * as fs      from "fs";
 import * as path    from "path";
 import * as zlib    from "zlib";
