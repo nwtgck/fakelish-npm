@@ -1,13 +1,15 @@
-import * as fs   from "fs";
-import * as path from "path";
-import * as zlib from "zlib";
+import * as fs      from "fs";
+import * as path    from "path";
+import * as zlib    from "zlib";
+
+// Path of word probabilities file
+const wordProbabilityPath = path.resolve(__dirname, "..", "resources", "word_probability.json.gz");
 
 // Word probabilities
 const wordProbability: {[str: string]: [[string, number]]} =
   JSON.parse(
-    zlib.gunzipSync(fs.readFileSync(path.join(__dirname, "word_probability.json.gz"))).toString("utf-8")
+    zlib.gunzipSync(fs.readFileSync(wordProbabilityPath)).toString("utf-8")
   );
-
 
 /**
  * Generate a fake word whose length is not specified

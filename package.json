@@ -1,11 +1,11 @@
 {
   "name": "fakelish",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Fake English word generator",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "scripts": {
-    "build": "tsc && cp lib/word_probability.json.gz dist/lib/word_probability.json.gz",
+    "build": "tsc && cp -a resources dist",
     "prepublish": "npm run build",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
@@ -21,13 +21,19 @@
   "author": "Ryo Ota",
   "license": "MIT",
   "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
     "@types/mocha": "^5.0.0",
     "@types/node": "^10.9.4",
     "@types/power-assert": "^1.5.0",
     "espower-typescript": "^9.0.0",
+    "get-root-path": "^2.0.2",
     "mocha": "^5.0.5",
     "power-assert": "^1.4.4",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "get-root-path": "^2.0.2"
   }
 }
