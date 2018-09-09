@@ -13,21 +13,17 @@ npm i -S fakelish
 
 ## Usage
 
-Here is an usage of `fakelish`.  
+Here is an usage in JavaScript.
 
-```ts
+```js
 // Import fakelish
 const fakelish = require("fakelish");
-
-// Lengths of fake words should be between minLen and maxLen
-const minLen = 4;
-const maxLen = 7;
 
 (async ()=>{
   // Generate 20 fake words
   for(let i = 0; i < 20; i++) {
     // Generate a fake word
-    const fakeWord = await fakelish.generateFakeWordByMinMaxLength(minLen, maxLen);
+    const fakeWord = await fakelish.generateFakeWord();
     // Print the capitalized fake word
     console.log(capitalize(fakeWord));
   }
@@ -38,7 +34,7 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.substring(1);
 }
 ```
-(<https://runkit.com/nwtgck/5b92ba85f11fe20011ed3873>)
+([example/src/example1.js](example/src/example1.js))
 
 
 The output should be like the following.
