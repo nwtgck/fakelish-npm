@@ -29,7 +29,7 @@ export function generateFakeWordWithUnexpectedLength(maxSeqN: number = 4, random
     let nextAccumedProbs: [[string, number]];
     let n = 0;
     do {
-      const str = chrs.slice(n).join();
+      const str = chrs.slice(n).join("");
       nextAccumedProbs = wordProbability[str];
       n += 1
     } while (nextAccumedProbs === undefined && n < chrs.length);
