@@ -29,7 +29,7 @@ export function generateFakeWordWithUnexpectedLength(maxSeqN: number = 4, random
     let nextAccumedProbs: [[string, number]];
     let n = 0;
     do {
-      const str = chrs.slice(n).join();
+      const str = chrs.slice(n).join("");
       nextAccumedProbs = wordProbability[str];
       n += 1
     } while (nextAccumedProbs === undefined && n < chrs.length);
@@ -76,7 +76,7 @@ export async function generateFakeWordByLength(length: number, maxSeqN: number =
  * @param maxSeqN
  * @param randomGenerator
  */
-export async function generateFakeWord(minLength: number = 4, maxLength: number = 9, maxSeqN: number = 4, randomGenerator: () => number = Math.random): Promise<string> {
+export async function generateFakeWord(minLength: number = 4, maxLength: number = 9, maxSeqN: number = 2, randomGenerator: () => number = Math.random): Promise<string> {
   let fakeWord: string = "";
   while(!(minLength <= fakeWord.length && fakeWord.length <= maxLength)) {
     fakeWord = await new Promise<string>((resolve)=>{

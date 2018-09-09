@@ -19,11 +19,15 @@ Here is an usage in JavaScript.
 // Import fakelish
 const fakelish = require("fakelish");
 
+// Min and max Lengths of fake words
+const minLen = 7;
+const maxLen = 11;
+
 (async ()=>{
   // Generate 20 fake words
   for(let i = 0; i < 20; i++) {
     // Generate a fake word
-    const fakeWord = await fakelish.generateFakeWord();
+    const fakeWord = await fakelish.generateFakeWord(minLen, maxLen);
     // Print the capitalized fake word
     console.log(capitalize(fakeWord));
   }
@@ -40,22 +44,24 @@ function capitalize(str) {
 The output should be like the following.
 
 ```
-Vess
-Catong
-Pinh
-Edia
-Verfesh
-Perigl
-Chal
-Pulane
-Kigoxe
-Oion
-Soth
-Anke
-Mans
-Wophecc
-Blingy
-Euste
-Abitin
-...
+Schyperant
+Imposillack
+Tioughters
+Schgruids
+Viestios
+Mundrial
+Unkalphast
+Mireock
+Babrilly
+Formalated
+Gimbrawer
+Trident
+Compler
+Ligical
+Deprene
+Ocoarriete
+Raxalluffic
+Pecties
+Daeorhons
+Herbalve
 ```
