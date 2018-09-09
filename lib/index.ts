@@ -12,16 +12,16 @@ const wordProbability: {[str: string]: [[string, number]]} =
   );
 
 /**
- * Generate a fake word whose length is not specified
+ * Generate a fake word whose length is unexpected
  *
  * @param maxSeqN
  * @param randomGenerator
  */
-export function generateFakeWord(maxSeqN: number = 4, randomGenerator: () => number = Math.random) {
+export function generateFakeWordWithUnexpectedLength(maxSeqN: number = 4, randomGenerator: () => number = Math.random): string {
   let ch       = "^";
   let fakeWord = "";
   let chrs: string[] = [];
-  while(ch != "END") {
+  while(ch !== "END") {
     chrs = [...chrs, ch];
     if (chrs.length > maxSeqN) {
       chrs = chrs.slice(1);
@@ -44,7 +44,7 @@ export function generateFakeWord(maxSeqN: number = 4, randomGenerator: () => num
         break
       }
     }
-    if(nextCh != "END") {
+    if(nextCh !== "END") {
       fakeWord += nextCh;
     }
     ch = nextCh;
@@ -63,7 +63,7 @@ export async function generateFakeWordByLength(length: number, maxSeqN: number =
   let fakeWord: string = "";
   while(fakeWord.length != length) {
     fakeWord = await new Promise<string>((resolve)=>{
-      resolve(generateFakeWord(maxSeqN, randomGenerator));
+      resolve(generateFakeWordWithUnexpectedLength(maxSeqN, randomGenerator));
     });
   }
   return fakeWord
@@ -76,11 +76,11 @@ export async function generateFakeWordByLength(length: number, maxSeqN: number =
  * @param maxSeqN
  * @param randomGenerator
  */
-export async function generateFakeWordByMinMaxLength(minLength: number, maxLength: number, maxSeqN: number = 4, randomGenerator: () => number = Math.random): Promise<string> {
+export async function generateFakeWord(minLength: number = 4, maxLength: number = 9, maxSeqN: number = 4, randomGenerator: () => number = Math.random): Promise<string> {
   let fakeWord: string = "";
   while(!(minLength <= fakeWord.length && fakeWord.length <= maxLength)) {
     fakeWord = await new Promise<string>((resolve)=>{
-      resolve(generateFakeWord(maxSeqN, randomGenerator));
+      resolve(generateFakeWordWithUnexpectedLength(maxSeqN, randomGenerator));
     });
   }
   return fakeWord

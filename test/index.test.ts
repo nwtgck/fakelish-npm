@@ -1,4 +1,4 @@
-import {generateFakeWord, generateFakeWordByLength, generateFakeWordByMinMaxLength} from '../lib';
+import {generateFakeWordWithUnexpectedLength, generateFakeWordByLength, generateFakeWord} from '../lib';
 import * as assert from 'power-assert';
 
 describe('generateFakeWordByLength', () => {
@@ -12,7 +12,7 @@ describe('generateFakeWordByLength', () => {
     const minLength: number = 4;
     const maxLength: number = 9;
     for(let i = 0; i < 100; i++) {
-      const fakeWord: string = await generateFakeWordByMinMaxLength(minLength, maxLength);
+      const fakeWord: string = await generateFakeWord(minLength, maxLength);
       assert.equal(minLength <= fakeWord.length && fakeWord.length <= maxLength, true);
     }
   });
