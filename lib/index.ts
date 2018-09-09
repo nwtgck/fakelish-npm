@@ -76,7 +76,7 @@ export async function generateFakeWordByLength(length: number, maxSeqN: number =
  * @param maxSeqN
  * @param randomGenerator
  */
-export async function generateFakeWord(minLength: number = 4, maxLength: number = 9, maxSeqN: number = 4, randomGenerator: () => number = Math.random): Promise<string> {
+export async function generateFakeWord(minLength: number = 4, maxLength: number = 9, maxSeqN: number = 2, randomGenerator: () => number = Math.random): Promise<string> {
   let fakeWord: string = "";
   while(!(minLength <= fakeWord.length && fakeWord.length <= maxLength)) {
     fakeWord = await new Promise<string>((resolve)=>{
