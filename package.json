@@ -1,6 +1,6 @@
 {
   "name": "fakelish",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Fake English word generator",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
