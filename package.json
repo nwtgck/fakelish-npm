@@ -5,7 +5,7 @@
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "scripts": {
-    "build": "tsc && cp -a resources dist",
+    "build": "tsc",
     "prepublish": "npm run build",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
