@@ -1,15 +1,4 @@
-import * as fs      from "fs";
-import * as path    from "path";
-import * as zlib    from "zlib";
-
-// Path of word probabilities file
-const wordProbabilityPath = path.resolve(__dirname, "..", "resources", "word_probability.json.gz");
-
-// Word probabilities
-const wordProbability: {[str: string]: [[string, number]]} =
-  JSON.parse(
-    zlib.gunzipSync(fs.readFileSync(wordProbabilityPath)).toString("utf-8")
-  );
+import {wordProbability} from './word-probability';
 
 /**
  * Generate a fake word whose length is unexpected
@@ -26,7 +15,7 @@ export function generateFakeWordWithUnexpectedLength(maxSeqN: number = 4, random
     if (chrs.length > maxSeqN) {
       chrs = chrs.slice(1);
     }
-    let nextAccumedProbs: [[string, number]];
+    let nextAccumedProbs: [string, number][];
     let n = 0;
     do {
       const str = chrs.slice(n).join("");
