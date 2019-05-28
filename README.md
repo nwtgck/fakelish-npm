@@ -5,6 +5,10 @@
 
 Fake English word generator
 
+## Try on Web Browser
+<https://fakelish.netlify.com>  
+(repo: <https://github.com/nwtgck/fakelish-web>)
+
 ## Install
 
 ```bash
