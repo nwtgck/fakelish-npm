@@ -6,7 +6,7 @@
   "types": "dist/lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
   "keywords": [
