@@ -69,3 +69,6 @@ Pecties
 Daeorhons
 Herbalve
 ```
+
+## For Go language and CLI
+GitHub Repository: <https://github.com/nwtgck/go-fakelish>
