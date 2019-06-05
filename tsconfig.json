@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "strict": true,
     "noImplicitReturns": true,
     "removeComments": true,
     "preserveConstEnums": true,
